@@ -72,7 +72,6 @@ begin
     writeLn('Point = ',point);
 end;
 
-// coba edit
 // Tampil Kunci Jawaban
 procedure jb(jawab:pilgan; jp:jaw);
 var i:integer;
