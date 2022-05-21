@@ -12,7 +12,7 @@ i,ist: integer;
 st:pilgan;
 NAMA:Lnama;
 
-
+// nambah komen
 // INI BUAT LOADING
 procedure loading;
 VAR
