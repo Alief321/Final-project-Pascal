@@ -1,7 +1,7 @@
 PROGRAM FINALALPRO;
 
 uses crt;
-label s,ketnil;
+label s,ketnil,babchoose;
 type
 pilgan= array [1..5] of char;
 jaw= array [1..5] of string;
@@ -11,6 +11,7 @@ start,lanjut:char;
 i,ist: integer;
 st:pilgan;
 NAMA:Lnama;
+BAB:string;
 
 
 // INI BUAT LOADING
@@ -236,8 +237,27 @@ begin
     
     // Rencana disini nanti lanjut ke pemilihan topik soal
     if lowercase(lanjut)='y' then 
+    begin
     // Disini nanti ada pemilihan subbab soal
-    soal(NAMA)
+        babchoose:
+        clrscr;
+        writeLn('         BAB SOAL ');
+        Writeln('============================');
+        Writeln('1. Materi ..');
+        Writeln('2. Materi ..');
+        Writeln('3. Materi ..');
+        Writeln('4. Materi ..');
+        Writeln();
+        textcolor(yellow);gotoxy(WhereX,9);Writeln('note: cukup tuliskan angkanya saja');
+        textcolor(white);gotoxy(WhereX,8);write('Silahkan pilih Bab soal = ');Readln(BAB);
+        case bab of
+            '1': soal(NAMA)
+            else begin
+                textcolor(red);gotoxy(WhereX,11);Writeln('error invalid code'); 
+                delay(300);textcolor(white);goto babchoose;
+            end;
+        end;
+    end
     else goto ketnil;
 
 
