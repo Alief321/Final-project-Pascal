@@ -190,7 +190,7 @@ begin
 
     // Masuk Tampilan awal
     Clrscr;
-    GOTOXY(5,WhereY);Writeln('PROGRAM QUIZ "TIDAK SUSAH"');
+    GOTOXY(5,WhereY);Writeln('   PROGRAM QUIZ ALPRO');
     Writeln('==================================');
     gotoxy(3,WhereY);writeLn('Dibuat oleh = Kelompok 2 1KS5');
     GotoXy(5,5); writeLn('------------------------');
