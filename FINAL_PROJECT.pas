@@ -143,8 +143,8 @@ jp:jaw;
 begin
 
 // kunci jawaban
-jawab[1]:='a'; jp[1]:='saya bang';
-jawab[2]:='b'; jp[2]:='Magelang'; {Lanjutin sampe 5;  Jawab itu kunci buat opsi pilgannya;  jp itu kunci jawaban yang tulisan sebelaeh pilgan}
+    jawab[1]:='a'; jp[1]:='saya bang';
+    jawab[2]:='b'; jp[2]:='Magelang'; {Lanjutin sampe 5;  Jawab itu kunci buat opsi pilgannya;  jp itu kunci jawaban yang tulisan sebelaeh pilgan}
 
 
     clrscr;
@@ -202,7 +202,7 @@ begin
     writeLn;
     gotoxy(5,9);Write('Tekan y untuk memulai = ');
     ist:=0;
-    for i:=1 to 5 do  begin
+    for i:=1 to 5 do  begin     {animasi start}
         delay(500);textbackground(white);textcolor(BLACK);GotoXY(15+ist,6);Write(st[i]);
         ist:=ist+1;
     end;
@@ -237,7 +237,7 @@ begin
     
     if lowercase(lanjut)='y' then 
     begin
-    // Disini nanti ada pemilihan subbab soal
+    //  Pemilihan subbab soal
         babchoose:
         clrscr;
         writeLn('         BAB SOAL ');
