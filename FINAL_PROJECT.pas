@@ -182,7 +182,7 @@ end;
 // MAIN PROGRAM
 begin
     s:
-    // indekS start wkkw
+    // indekS start 
     st[1]:='S';
     st[2]:='T';
     st[3]:='A';
@@ -235,7 +235,6 @@ begin
         textcolor(yellow);write('lalu'); textcolor(red);writeln(' "enter"');textcolor(white);
     write('tekan y untuk lanjut = '); readln(lanjut);
     
-    // Rencana disini nanti lanjut ke pemilihan topik soal
     if lowercase(lanjut)='y' then 
     begin
     // Disini nanti ada pemilihan subbab soal
@@ -250,11 +249,14 @@ begin
         Writeln();
         textcolor(yellow);gotoxy(WhereX,9);Writeln('note: cukup tuliskan angkanya saja');
         textcolor(white);gotoxy(WhereX,8);write('Silahkan pilih Bab soal = ');Readln(BAB);
-        case bab of
-            '1': soal(NAMA)
+        case bab of     {ini nanti casenya bakal diganti}
+            '1': soal(NAMA);
+            '2': soal(Nama); 
+            '3': soal(Nama);
+            '4': soal(Nama);
             else begin
                 textcolor(red);gotoxy(WhereX,11);Writeln('error invalid code'); 
-                delay(300);textcolor(white);goto babchoose;
+                delay(150);textcolor(white);goto babchoose;
             end;
         end;
     end
