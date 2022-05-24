@@ -19,32 +19,32 @@ procedure loading;
 VAR
 X,Z:integer;
 begin
-     clrscr;
-     Z:=0;
-     gotoxy(36,10);
-     writeln('Loading..');
-     gotoxy(29,13);
-     writeln('---------------------');
-     gotoxy(29,14);
-     writeln('|');
-     gotoxy(50,14);
-     writeln('|');
-     gotoxy(29,15);
-     writeln('---------------------');
- 
-     for x:=1 to 100 do
+    clrscr;
+    Z:=0;
+    gotoxy(36,10);
+    writeln('Loading..');
+    gotoxy(29,13);
+    writeln('---------------------');
+    gotoxy(29,14);
+    writeln('|');
+    gotoxy(50,14);
+    writeln('|');
+    gotoxy(29,15);
+    writeln('---------------------');
+
+    for x:=1 to 100 do
     begin
-          delay(10);
-          gotoxy(38,12);
-          writeln(x,' %');
- 
-          if(x mod 5=0) then
+        delay(10);
+        gotoxy(38,12);
+        writeln(x,' %');
+
+        if(x mod 5=0) then
         begin
-              z:=z+1;
-              gotoxy(29+z,14);
-              write('=');
-          end;
-     end;
+            z:=z+1;
+            gotoxy(29+z,14);
+            write('=');
+        end;
+    end;
 end;
 
 // Perhitungan Point
