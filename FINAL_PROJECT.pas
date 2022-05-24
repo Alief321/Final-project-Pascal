@@ -63,7 +63,7 @@ begin
         else 
         salah:=salah+1;
     end;
-        point:= benar*3+salah*-1+kosong*0;
+        point:= (benar*20)+(salah*-5)+(kosong*0);
     Writeln('Nama = ',Nama);
     writeLn('===========================');
     Writeln;
@@ -225,8 +225,8 @@ begin
     clrscr;
     Writeln('      Ketentuan nilai');
     Writeln('============================');
-    Writeln('|  jawaban benar =  3 poin  |');
-    Writeln('|  jawaban salah = -1 poin  |');
+    Writeln('|  jawaban benar =  20 poin |');
+    Writeln('|  jawaban salah = -5 poin  |');
     Writeln('|  jawaban kosong = 0 poin  |');
     Writeln('============================');
     writeLn;
