@@ -9,7 +9,7 @@ Lnama=string[20];
 var
 start,lanjut:char;
 i,ist: integer;
-st:pilgan;
+st:string[5];
 NAMA:Lnama;
 BAB:string;
 
@@ -181,13 +181,8 @@ end;
 
 // MAIN PROGRAM
 begin
-    s:
-    // indekS start 
-    st[1]:='S';
-    st[2]:='T';
-    st[3]:='A';
-    st[4]:='R';
-    st[5]:='T';
+    s: 
+    st:='START';
 
     // Masuk Tampilan awal
     Clrscr;
@@ -201,9 +196,9 @@ begin
     GotoXy(5,7); writeLn('------------------------');
     writeLn;
     gotoxy(5,9);Write('Tekan y untuk memulai = ');
-    ist:=0;
-    for i:=1 to 5 do  begin     {animasi start}
-        delay(500);textbackground(white);textcolor(BLACK);GotoXY(15+ist,6);Write(st[i]);
+    ist:=15;
+    for i:=1 to length(st) do  begin     {animasi start}
+        delay(500);textbackground(white);textcolor(BLACK);GotoXY(ist,6);Write(st[i]);
         ist:=ist+1;
     end;
     textbackground(0);textcolor(white);gotoxy(29,9);readln(start);
