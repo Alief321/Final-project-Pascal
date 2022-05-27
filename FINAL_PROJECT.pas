@@ -1,6 +1,6 @@
 PROGRAM FINALALPRO;
 
-uses crt;
+uses crt,math;
 label s,ketnil,babchoose;
 type
 pilgan= array [1..5] of char;
@@ -13,36 +13,73 @@ st:string[5];
 NAMA:Lnama;
 BAB:string;
 
-// Intro bos
+
+// intro 1 wkwk
+procedure intro1;
+var x:integer;
+begin
+    clrscr;
+    Randomize;
+    for i:=1 to 11 do begin //ini nanti tulisannya turun
+    x:=Randomrange(9,14);
+    if i=11 then x:=14;
+    textcolor(x);
+    clrscr;
+    gotoxy(1,i-7);Writeln('= = = = = = = =     =     =             =           =         =');
+    gotoxy(1,i-6);Writeln('=                   =     = =           =          = =        =');
+    gotoxy(1,i-5);Writeln('=                   =     =   =         =         =   =       =');
+    gotoxy(1,i-4);Writeln('= = = = = = = =     =     =     =       =        = = = =      =');
+    gotoxy(1,i-3); Writeln('=                   =     =       =     =       =       =     =');
+    gotoxy(1,i-2);Writeln('=                   =     =         =   =      =         =    =');
+    gotoxy(1,i-1);Writeln('=                   =     =           = =     =           =   =');
+    gotoxy(1,i);Writeln('=                   =     =             =    =             =  = = = = = = = ');
+    delay(150);
+    end;
+    writeLn;
+    writeLn;
+    for i:=21 downto 12 do begin //ini nanti tulisannya naik
+    x:=Randomrange(9,14);
+    if i=12 then x:=10;
+    textcolor(x);
+    delline;
+    gotoxy(1,i+3);Writeln('= = = = = =     = = = = = =  = = = = = =           =   = = = = =     = = = = =   = = = = = =');delline;
+    gotoxy(1,i+4);Writeln('=         =     =         =  =         =           =   =           =                  =');delline;
+    gotoxy(1,i+5);Writeln('=         =     =         =  =         =           =   =           =                  =');delline;
+    gotoxy(1,i+6);Writeln('= = = = = =     = = = = = =  =         =           =   = = = = =   =                  =');delline;
+    gotoxy(1,i+7);Writeln('=               = =          =         =           =   =           =                  =');delline;
+    gotoxy(1,i+8);Writeln('=               =  =         =         =    =      =   =           =                  =');delline;
+    gotoxy(1,i+9);Writeln('=               =   =        =         =    =      =   =           =                  =');delline;
+    gotoxy(1,i+10);Writeln('=               =    =       = = = = = =     = = = =   = = = = =     = = = = =        =');delline;
+    delay(150);
+    end;
+    delay(1500);
+    textcolor(white);
+end;
+
+// Intro 2 hehe
 procedure intro;
 var
 teks: string[20];
-teks2: string[40];
+teks2: string[42];
 teks3,teks4:string[30];
 posisiKar,i,x,y: integer;
 
 begin
+    intro1;
     clrscr;
     teks := '===================';
-    teks2 := '=====================================';
+    teks2 := '=======================================';
     teks3 := 'SELAMAT DATANG DI PROGRAM QUIZ';
     teks4 := '         KELOMPOK 2           ';
 
     Randomize;
-
-    for posisiKar := 1 to length(teks) do
-    begin
-        x:=Random(40);
-        y:=Random(25);
-        gotoxy(x,y);write(teks[posisiKar]);
-        delay(60);{ Mengapa X harus ditambah dengan 1 pada saat perulangan berjalan ?? }
-    end;
     clrscr;
-    for i:=1 to length(teks) do begin
+    // Ngeprint kotakan
+    for i:=1 to length(teks) do begin  
         gotoxy(1,i);write(teks[i]);
         delay(60);  
     end;
-    for i:=1 to length(teks2) do begin
+    for i:=2 to length(teks2) do begin
         gotoxy(i,WhereY);write(teks2[i]);
         delay(60);
     end;
@@ -50,11 +87,12 @@ begin
         gotoxy(40,i);write(teks[i]);
         delay(60);
     end;
-    for i:=length(teks2) downto 1 do begin
+    for i:=length(teks2) downto 2 do begin
         gotoxy(i,WhereY);write(teks2[i]);
         delay(60);
     end;
-
+    
+    {ngeprint tulisan}
     for i:=1 to length(teks3) do begin
         gotoXY(i+5,9);Write(teks3[i]);
         delay(60);
@@ -66,11 +104,11 @@ begin
         gotoXY(i+5,10);Write(teks2[i]);
         delay(60);
     end;
-    for i:=1 to 19 do begin
-        x:=Random(19);
+    for i:=1 to 19 do begin   //untuk blink blink wkwk
+        x:=Randomrange(9,14);
         textcolor(x);
         gotoxy(1,1);
-        Writeln('=====================================  =');
+        Writeln('========================================');
         Writeln('=                                      =');
         Writeln('=                                      =');
         Writeln('=                                      =');
@@ -80,7 +118,7 @@ begin
         Writeln('=                                      =');
         Writeln('=    SELAMAT DATANG DI PROGRAM QUIZ    =');
         Writeln('=    ==============================    =');
-        Writeln('=            KELOMPOK 2                =');
+        Writeln('=              KELOMPOK 2              =');
         Writeln('=                                      =');
         Writeln('=                                      =');
         Writeln('=                                      =');
@@ -89,10 +127,11 @@ begin
         Writeln('=                                      =');
         Writeln('=                                      =');
         Writeln('=                                      =');
-        Writeln('=====================================  =');
+        Writeln('========================================');
         delay(100);
     end;
     textcolor(white);
+
 end;
 
 
@@ -105,7 +144,7 @@ begin
     Z:=0;
     textcolor(green);
     gotoxy(36,10);
-    writeln('Loading..');
+    writeln('Loading');
     gotoxy(29,13);
     writeln('---------------------');
     gotoxy(29,14);
@@ -114,7 +153,7 @@ begin
     writeln('|');
     gotoxy(29,15);
     writeln('---------------------');
-
+    
     for x:=1 to 100 do
     begin
         delay(10);
@@ -269,25 +308,25 @@ begin
 
     // Masuk Tampilan awal
     Clrscr;
+    textbackground(0);
     intro;
     s: 
     clrscr;
     GOTOXY(5,WhereY);Writeln('   PROGRAM QUIZ ALPRO');
     Writeln('==================================');
-    gotoxy(3,WhereY);writeLn('Dibuat oleh = Kelompok 2 1KS5');
-    GotoXy(5,5); writeLn('------------------------');
-    gotoxy(5,6);write('|');
+    GotoXy(5,4); writeLn('------------------------');
+    gotoxy(5,5);write('|');
     textbackground(0);
-    gotoXY(28,6);Writeln('|');
-    GotoXy(5,7); writeLn('------------------------');
+    gotoXY(28,5);Writeln('|');
+    GotoXy(5,6); writeLn('------------------------');
     writeLn;
-    gotoxy(5,9);Write('Tekan y untuk memulai = ');
+    gotoxy(5,8);Write('Tekan y untuk memulai = ');
     ist:=15;
     for i:=1 to length(st) do  begin     {animasi start}
-        delay(500);textbackground(white);textcolor(BLACK);GotoXY(ist,6);Write(st[i]);
+        delay(500);textbackground(white);textcolor(BLACK);GotoXY(ist,5);Write(st[i]);
         ist:=ist+1;
     end;
-    textbackground(0);textcolor(white);gotoxy(29,9);readln(start);
+    textbackground(0);textcolor(white);gotoxy(29,8);readln(start);
 
     if (lowercase(start)<>'y') then goto s; 
     loading;
@@ -331,10 +370,10 @@ begin
         textcolor(yellow);gotoxy(WhereX,9);Writeln('note: cukup tuliskan angkanya saja');
         textcolor(white);gotoxy(WhereX,8);write('Silahkan pilih Bab soal = ');Readln(BAB);
         case bab of     {ini nanti casenya bakal diganti}
-            '1': soal(NAMA);
-            '2': soal(Nama); 
-            '3': soal(Nama);
-            '4': soal(Nama);
+            '1': begin loading; soal(NAMA); end;
+            '2': begin loading; soal(NAMA); end;
+            '3': begin loading; soal(NAMA); end;
+            '4': begin loading; soal(NAMA); end;
             else begin
                 textcolor(red);gotoxy(WhereX,11);Writeln('error invalid code'); 
                 delay(150);textcolor(white);goto babchoose;
