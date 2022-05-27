@@ -187,14 +187,14 @@ begin
     case lihat of
         1:begin 
             poin(answer,jawab,Nama);  //menampilkan jumlah point
-            writeLn;
-            write('tekan y untuk kembali = ');readln(kem);
+            writeLn;textcolor(green);
+            write('tekan y untuk kembali = ');readln(kem);textcolor(white);
             if lowercase(kem)='y' then goto u;
         end;
         2:begin 
             jb(jawab,jp);  //menampilkan kunci jawaban
-            writeLn;
-            write('tekan y untuk kembali = ');readln(kem);
+            writeLn; textcolor(green);
+            write('tekan y untuk kembali = ');readln(kem);textcolor(white);
             if lowercase(kem)='y' then goto u;
         end;
         3:begin //tampilan keluar
