@@ -61,7 +61,7 @@ begin
     end;
 
     for i:=1 to length(teks4) do begin
-        gotoXY(i+5,11);Write(teks4[i]);
+        gotoXY(i+6,11);Write(teks4[i]);
         delay(60);
         gotoXY(i+5,10);Write(teks2[i]);
         delay(60);
@@ -265,12 +265,12 @@ end;
 
 // MAIN PROGRAM
 begin
-    s: 
     st:='START';
 
     // Masuk Tampilan awal
     Clrscr;
     intro;
+    s: 
     clrscr;
     GOTOXY(5,WhereY);Writeln('   PROGRAM QUIZ ALPRO');
     Writeln('==================================');
