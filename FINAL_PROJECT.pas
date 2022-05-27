@@ -13,6 +13,88 @@ st:string[5];
 NAMA:Lnama;
 BAB:string;
 
+// Intro bos
+procedure intro;
+var
+teks: string[20];
+teks2: string[40];
+teks3,teks4:string[30];
+posisiKar,i,x,y: integer;
+
+begin
+    clrscr;
+    teks := '===================';
+    teks2 := '=====================================';
+    teks3 := 'SELAMAT DATANG DI PROGRAM QUIZ';
+    teks4 := '         KELOMPOK 2           ';
+
+    Randomize;
+
+    for posisiKar := 1 to length(teks) do
+    begin
+        x:=Random(40);
+        y:=Random(25);
+        gotoxy(x,y);write(teks[posisiKar]);
+        delay(60);{ Mengapa X harus ditambah dengan 1 pada saat perulangan berjalan ?? }
+    end;
+    clrscr;
+    for i:=1 to length(teks) do begin
+        gotoxy(1,i);write(teks[i]);
+        delay(60);  
+    end;
+    for i:=1 to length(teks2) do begin
+        gotoxy(i,WhereY);write(teks2[i]);
+        delay(60);
+    end;
+    for i:=length(teks) downto 1 do begin
+        gotoxy(40,i);write(teks[i]);
+        delay(60);
+    end;
+    for i:=length(teks2) downto 1 do begin
+        gotoxy(i,WhereY);write(teks2[i]);
+        delay(60);
+    end;
+
+    for i:=1 to length(teks3) do begin
+        gotoXY(i+5,9);Write(teks3[i]);
+        delay(60);
+    end;
+
+    for i:=1 to length(teks4) do begin
+        gotoXY(i+5,11);Write(teks4[i]);
+        delay(60);
+        gotoXY(i+5,10);Write(teks2[i]);
+        delay(60);
+    end;
+    for i:=1 to 19 do begin
+        x:=Random(19);
+        textcolor(x);
+        gotoxy(1,1);
+        Writeln('=====================================  =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');    
+        Writeln('=                                      =');
+        Writeln('=                                      =');    
+        Writeln('=                                      =');
+        Writeln('=    SELAMAT DATANG DI PROGRAM QUIZ    =');
+        Writeln('=    ==============================    =');
+        Writeln('=            KELOMPOK 2                =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');
+        Writeln('=                                      =');
+        Writeln('=====================================  =');
+        delay(100);
+    end;
+    textcolor(white);
+end;
+
 
 // INI BUAT LOADING
 procedure loading;
@@ -21,6 +103,7 @@ X,Z:integer;
 begin
     clrscr;
     Z:=0;
+    textcolor(green);
     gotoxy(36,10);
     writeln('Loading..');
     gotoxy(29,13);
@@ -45,6 +128,7 @@ begin
             write('=');
         end;
     end;
+    textcolor(white);
 end;
 
 // Perhitungan Point
@@ -186,6 +270,8 @@ begin
 
     // Masuk Tampilan awal
     Clrscr;
+    intro;
+    clrscr;
     GOTOXY(5,WhereY);Writeln('   PROGRAM QUIZ ALPRO');
     Writeln('==================================');
     gotoxy(3,WhereY);writeLn('Dibuat oleh = Kelompok 2 1KS5');
@@ -256,6 +342,5 @@ begin
         end;
     end
     else goto ketnil;
-
 
 end.
