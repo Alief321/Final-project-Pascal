@@ -293,11 +293,12 @@ end;
 // Gate Check
 function check(a:char):char;
 begin
-    while (a<>'a') and (a<>'b') and (a<>'c') and (a<>'d') and (a<>' ') and (a<>'') do begin
+    while((a<>'a') and (a<>'b') and (a<>'c') and (a<>'d') and (a<>' ') and (a<>''))do begin
+        if ((a='a') or (a='b') or (a='c') or (a='d') or (a=' ')) then break;
         textcolor(red); gotoxy(1,10);Write('Error Invalid Input'); delay(100);delline;
-        textcolor(white); gotoxy(1,10); write('Jawab = '); read(check); delay(100); delline;
-        a:=check;
+        textcolor(white); gotoxy(1,10); write('Jawab = '); read(a); delay(100); delline;
     end;
+    check:=a;
 end;
 
 // SOAL BAGIAN 1
