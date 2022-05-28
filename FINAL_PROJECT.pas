@@ -224,7 +224,7 @@ end;
 
 // Tampilan setelah soal selesai
 procedure closing(answer,jawab:pilgan; NAMA:Lnama; jp:jaw);
-label u;
+label u,hitpoint,kuncjaw;
 var 
 lihat,x:integer; 
 kem:char;
@@ -240,16 +240,28 @@ begin
 
     case lihat of
         1:begin 
+            Hitpoint:
+            clrscr;
             poin(answer,jawab,Nama);  //menampilkan jumlah point
             writeLn;textcolor(green);
             write('tekan y untuk kembali = ');readln(kem);textcolor(white);
-            if lowercase(kem)='y' then goto u;
+            if lowercase(kem)='y' then goto u
+            else begin
+                textcolor(red);Writeln('Error invalid input');delay(500);
+                textcolor(white);goto Hitpoint;
+            end;
         end;
-        2:begin 
+        2:begin
+            kuncjaw:
+            clrscr; 
             jb(jawab,jp);  //menampilkan kunci jawaban
             writeLn; textcolor(green);
             write('tekan y untuk kembali = ');readln(kem);textcolor(white);
-            if lowercase(kem)='y' then goto u;
+            if lowercase(kem)='y' then goto u
+            else begin
+                textcolor(red);Writeln('Error invalid input');delay(500);
+                textcolor(white);goto kuncjaw;
+            end;
         end;
         3:begin //tampilan keluar
             for i:=17 downto 1 do begin
@@ -284,6 +296,9 @@ begin
 // kunci jawaban
     jawab[1]:='a'; jp[1]:='saya bang';
     jawab[2]:='b'; jp[2]:='Magelang'; {Lanjutin sampe 5;  Jawab itu kunci buat opsi pilgannya;  jp itu kunci jawaban yang tulisan sebelaeh pilgan}
+    jawab[3]:='b'; jp[3]:='Magelang';
+    jawab[4]:='b'; jp[4]:='Magelang';
+    jawab[5]:='b'; jp[5]:='Magelang';
 
     clrscr;
     Writeln('Soal 1');
