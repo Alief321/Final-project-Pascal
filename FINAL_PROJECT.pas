@@ -79,25 +79,25 @@ begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoxy(1,i);write(teks[i]);
-        delay(60);  
+        delay(35);  
     end;
     for i:=2 to length(teks2) do begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoxy(i,WhereY);write(teks2[i]);
-        delay(60);
+        delay(30);
     end;
     for i:=length(teks) downto 1 do begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoxy(40,i);write(teks[i]);
-        delay(60);
+        delay(35);
     end;
     for i:=length(teks2) downto 2 do begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoxy(i,WhereY);write(teks2[i]);
-        delay(60);
+        delay(30);
     end;
     
     {ngeprint tulisan}
@@ -105,16 +105,16 @@ begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoXY(i+5,9);Write(teks3[i]);
-        delay(60);
+        delay(35);
     end;
 
     for i:=1 to length(teks4) do begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoXY(i+6,11);Write(teks4[i]);
-        delay(60);
+        delay(35);
         gotoXY(i+5,10);Write(teks2[i]);
-        delay(60);
+        delay(35);
     end;
     for i:=1 to 20 do begin   //untuk blink blink wkwk
         x:=Randomrange(0,15);
@@ -142,7 +142,7 @@ begin
         Writeln('=                                      =');
         Writeln('=                                      =');
         Writeln('========================================');
-        delay(150);
+        delay(80);
     end;
     delay(1000); textcolor(white);textbackground(BLACK);
 end;
@@ -692,10 +692,7 @@ begin
         textcolor(yellow);write('lalu'); textcolor(red);writeln(' "enter"');textcolor(white);
     write('tekan y untuk lanjut = '); readln(lanjut);
     
-    if lowercase(lanjut)='y' then 
-    begin
-        pilihBab;
-        end
+    if lowercase(lanjut)='y' then pilihBab
     else goto ketnil;
 
 end.
