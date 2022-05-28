@@ -638,8 +638,7 @@ begin
     end;
 
 
-
-// MAIN PROGRAM
+{       MAIN PROGRAM      }
 begin
     st:='START';
 
@@ -667,8 +666,6 @@ begin
 
     if (lowercase(start)<>'y') then goto s; 
     loading;
-    Writeln;
-    Writeln;
 
     // Masukan Identitas
     clrscr;
