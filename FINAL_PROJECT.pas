@@ -284,8 +284,8 @@ begin
             exit;
         end;
         else begin
-            writeLn('Maaf input tidak tersedia'); delay(100);
-            goto u;
+            textcolor(red);writeLn('Maaf input tidak tersedia'); delay(100);
+            textcolor(white);goto u;
         end;
     end;
 end;
@@ -432,7 +432,6 @@ begin
     writeLn;
     write('jawab = ');readln(answer[4]);    
     clrscr;
-    writeLn;
     Writeln('Soal 5');
     writeln('Lihat cuplikan program di bawah ini...');
     writeln;
