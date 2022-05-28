@@ -79,25 +79,25 @@ begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoxy(1,i);write(teks[i]);
-        delay(35);  
+        delay(25);  
     end;
     for i:=2 to length(teks2) do begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoxy(i,WhereY);write(teks2[i]);
-        delay(30);
+        delay(20);
     end;
     for i:=length(teks) downto 1 do begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoxy(40,i);write(teks[i]);
-        delay(35);
+        delay(25);
     end;
     for i:=length(teks2) downto 2 do begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoxy(i,WhereY);write(teks2[i]);
-        delay(30);
+        delay(20);
     end;
     
     {ngeprint tulisan}
@@ -105,16 +105,16 @@ begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoXY(i+5,9);Write(teks3[i]);
-        delay(35);
+        delay(25);
     end;
 
     for i:=1 to length(teks4) do begin
         x:=Randomrange(9,14);
         textcolor(x);
         gotoXY(i+6,11);Write(teks4[i]);
-        delay(35);
+        delay(25);
         gotoXY(i+5,10);Write(teks2[i]);
-        delay(35);
+        delay(25);
     end;
     for i:=1 to 20 do begin   //untuk blink blink wkwk
         x:=Randomrange(0,15);
@@ -155,27 +155,27 @@ begin
     clrscr;
     Z:=0;
     textcolor(green);
-    gotoxy(36,10);
+    gotoxy(9,1);
     writeln('Memuat..');
-    gotoxy(29,13);
+    gotoxy(1,3);
     writeln('---------------------');
-    gotoxy(29,14);
+    gotoxy(1,4);
     writeln('|');
-    gotoxy(50,14);
+    gotoxy(22,4);
     writeln('|');
-    gotoxy(29,15);
+    gotoxy(1,5);
     writeln('---------------------');
     
     for x:=1 to 100 do
     begin
         delay(1);
-        gotoxy(38,12);
+        gotoxy(10,2);
         writeln(x,' %');
 
         if(x mod 5=0) then
         begin
             z:=z+1;
-            gotoxy(29+z,14);
+            gotoxy(1+z,4);
             write('=');
         end;
     end;
@@ -225,8 +225,8 @@ procedure pilihBab;forward;
 procedure closing(answer,jawab:pilgan; NAMA:Lnama; jp:jaw);
 label u,hitpoint,kuncjaw;
 var 
-lihat,x:integer; 
-kem:char;
+x:integer; 
+kem,lihat:char;
 begin
      // TAMPILAN SETELAH SELESAI MENGERJAKAN SOAL
     u:
@@ -239,7 +239,7 @@ begin
     writeLn;
 
     case lihat of
-        1:begin 
+        '1':begin 
             Hitpoint:
             clrscr;
             poin(answer,jawab,Nama);  //menampilkan jumlah point
@@ -251,7 +251,7 @@ begin
                 textcolor(white);goto Hitpoint;
             end;
         end;
-        2:begin
+        '2':begin
             kuncjaw:
             clrscr; 
             jb(jawab,jp);  //menampilkan kunci jawaban
@@ -263,11 +263,11 @@ begin
                 textcolor(white);goto kuncjaw;
             end;
         end;
-        3:begin
+        '3':begin
             Clrscr; loading; clrscr;
             pilihBab;
         end;
-        4:begin //tampilan keluar
+        '4':begin //tampilan keluar
             for i:=17 downto 1 do begin
             clrscr;
             x:=Randomrange(9,15);
@@ -287,6 +287,16 @@ begin
             textcolor(red);writeLn('Maaf input tidak tersedia'); delay(100);
             textcolor(white);goto u;
         end;
+    end;
+end;
+
+// Gate Check
+function check(a:char):char;
+begin
+    while (a<>'a') and (a<>'b') and (a<>'c') and (a<>'d') and (a<>' ') and (a<>'') do begin
+        textcolor(red); gotoxy(1,10);Write('Error Invalid Input'); delay(100);delline;
+        textcolor(white); gotoxy(1,10); write('Jawab = '); read(check); delay(100); delline;
+        a:=check;
     end;
 end;
 
@@ -312,7 +322,7 @@ begin
     Writeln('c. Rekursi');
     Writeln('d. Pengulangan');
     writeLn;
-    write('Jawab = ');readln(answer[1]);
+    write('Jawab = ');readln(answer[1]); answer[1]:=check(answer[1]);
     clrscr;
     Writeln('SOAL 2');
     Writeln('Apa yang dimaksud dengan algoritma ?');
@@ -321,7 +331,7 @@ begin
     Writeln('c. Cara untuk menambah masalah');
     Writeln('d. Syntax yang susah dimengerti');
     writeLn;
-    write('Jawab = ');readln(answer[2]);
+    write('Jawab = ');readln(answer[2]);answer[2]:=check(answer[2]);
     clrscr;
     Writeln('SOAL 3');
     Writeln('Kata-kata yang sudah didefinisikan oleh Pascal yang memiliki maksud tertentu dan tidak boleh digunakan dalam identifier disebut...');	
@@ -330,7 +340,7 @@ begin
     Writeln('c. Syntax');
     Writeln('d. Reserve word');
     writeLn;
-    write('Jawab = ');readln(answer[3]);
+    write('Jawab = ');readln(answer[3]);answer[3]:=check(answer[3]);
     clrscr;
     Writeln('SOAL 4');
     Writeln('Bilangan biner dari 60 adalah...');
@@ -339,7 +349,7 @@ begin
     Writeln('c. 0000 1101');
     Writeln('d. 1101 0000');
     writeLn;
-    write('Jawab = ');readln(answer[4]);
+    write('Jawab = ');readln(answer[4]);answer[4]:=check(answer[4]);
     clrscr;
     Writeln('SOAL 5');
     Writeln('Dibawah ini yang tidak termasuk tipe data Ordinal adalah...');
@@ -348,7 +358,7 @@ begin
     Writeln('c. Karakter');  
     Writeln('d. Real');
     writeln;
-    write('Jawab = ');readln(answer[5]);
+    write('Jawab = ');readln(answer[5]);answer[5]:=check(answer[5]);
 
     // Masuk tampilan setelah selesai mengerjakan 
     closing(answer,jawab,NAMA,jp);
@@ -611,7 +621,7 @@ end;
 
 procedure pilihBab;
 label babchoose;
-var bab:string;
+var bab:char;
 begin
         //  Pemilihan subbab soal
         babchoose:
@@ -664,14 +674,16 @@ begin
     end;
     textbackground(0);textcolor(white);gotoxy(29,8);readln(start);
 
-    if (lowercase(start)<>'y') then goto s; 
+    if (lowercase(start)<>'y') then begin 
+        textcolor(red); gotoxy(5,10);writeln('error invalid input'); delay(150);textcolor(white);goto s;
+    end; 
     loading;
 
     // Masukan Identitas
     clrscr;
-    gotoxy(25,12);Write('MASUKKAN NAMA (maks 20 karakter)');
-    gotoxy(32,16);Write('____________________');
-    gotoxy(32,15);readln(NAMA);
+    gotoxy(1,1);Write('MASUKKAN NAMA (maks 20 karakter)');
+    gotoxy(6,5);Write('____________________');
+    gotoxy(6,4);readln(NAMA);
     clrscr;
     loading;
 
@@ -690,6 +702,7 @@ begin
     write('tekan y untuk lanjut = '); readln(lanjut);
     
     if lowercase(lanjut)='y' then pilihBab
-    else goto ketnil;
-
+    else begin 
+        textcolor(red);writeln('error invalid input'); delay(150);textcolor(white);goto ketnil;
+    end;
 end.
