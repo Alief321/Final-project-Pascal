@@ -156,7 +156,7 @@ begin
     Z:=0;
     textcolor(green);
     gotoxy(36,10);
-    writeln('Loading');
+    writeln('Memuat..');
     gotoxy(29,13);
     writeln('---------------------');
     gotoxy(29,14);
@@ -283,43 +283,6 @@ begin
     end;
 end;
 
-// Contoh Sample Soal
-procedure soal(NAMA:string);  
-var 
-answer,jawab:pilgan;
-jp:jaw;
-begin
-
-// kunci jawaban
-    jawab[1]:='a'; jp[1]:='saya bang';
-    jawab[2]:='b'; jp[2]:='Magelang'; {Lanjutin sampe 5;  Jawab itu kunci buat opsi pilgannya;  jp itu kunci jawaban yang tulisan sebelaeh pilgan}
-    jawab[3]:='b'; jp[3]:='Magelang';
-    jawab[4]:='b'; jp[4]:='Magelang';
-    jawab[5]:='b'; jp[5]:='Magelang';
-
-    clrscr;
-    Writeln('Soal 1');
-    Writeln('Siapa yang kalo sudah besar cita-citanya jadi pro player epep?');
-    Writeln('a. saya bang');
-    Writeln('b. bukan saya');
-    Writeln('c. kamu bang');
-    Writeln('d. aceng');
-    writeLn;
-    write('jawab = ');readln(answer[1]);
-    clrscr;
-    Writeln('Soal 2');
-    Writeln('Candi Borobudur ada dimana?');
-    Writeln('a. Kurang tahu');
-    Writeln('b. Magelang');
-    Writeln('c. Tidak tahu');
-    Writeln('d. YNTKTS');
-    writeLn;
-    write('jawab = ');readln(answer[2]); {LANJUTIN SAMPE 5 SOAL}
-    
-    // Masuk tampilan setelah selesai mengerjakan
-    closing(answer,jawab,NAMA,jp);
-end;
-
 // SOAL BAGIAN 1
 procedure soal1(NAMA:string);  
 var 
@@ -336,7 +299,7 @@ begin
 
     clrscr;
     Writeln('SOAL 1');
-    Writeln('Dibawah ini yang bukan struktur dasar algoritma adalah…');
+    Writeln('Dibawah ini yang bukan struktur dasar algoritma adalah...');
     Writeln('a.	Runtunan');
     Writeln('b.	Pemilihan');
     Writeln('c.	Rekursi');
@@ -354,7 +317,7 @@ begin
     write('Jawab = ');readln(answer[2]);
     clrscr;
     Writeln('SOAL 3');
-    Writeln('Kata-kata yang sudah didefinisikan oleh Pascal yang memiliki maksud tertentu dan tidak boleh digunakan dalam identifier disebut…');	
+    Writeln('Kata-kata yang sudah didefinisikan oleh Pascal yang memiliki maksud tertentu dan tidak boleh digunakan dalam identifier disebut...');	
     Writeln('a. Operator word') ;  
     Writeln('b. Langkah-langkah praktis');
     Writeln('c. Syntax');
@@ -363,7 +326,7 @@ begin
     write('Jawab = ');readln(answer[3]);
     clrscr;
     Writeln('SOAL 4');
-    Writeln('Bilangan`biner dari 60 adalah. .');
+    Writeln('Bilangan`biner dari 60 adalah...');
     Writeln('a. 0011 1100');    
     Writeln('b. 1100 0011');
     Writeln('c. 0000 1101');
@@ -372,7 +335,7 @@ begin
     write('Jawab = ');readln(answer[4]);
     clrscr;
     Writeln('SOAL 5');
-    Writeln('Dibawah ini yang tidak termasuk tipe data Ordinal adalah…');
+    Writeln('Dibawah ini yang tidak termasuk tipe data Ordinal adalah...');
     Writeln('a. Subrange');    
     Writeln('b. Integer');
     Writeln('c. Karakter');  
@@ -404,7 +367,7 @@ begin
     writeln('If kondisi then aksi1');
     writeln('Else if kondisi2 then aksi2');
     gotoxy(wherex+3,wherey);writeln('Else if kondisi3 then aksi3');
-    writeln('Dan seterusnya disebut dengan pernyataan IF THEN ELSE .');
+    writeln('Dan seterusnya disebut dengan pernyataan IF THEN ELSE ...');
     writeln('a. Bersarang');
     writeln('b. Berjenjang');
     writeln('c. Beranak-pinak ');
@@ -413,7 +376,7 @@ begin
     write('Jawab = ');readln(answer[1]); 
     clrscr;
     Writeln('SOAL 2');
-    writeln('Berdasarkan struktur pilihan berikut, nilai indentifier r yang akan ditampilkan adalah .');
+    writeln('Berdasarkan struktur pilihan berikut, nilai indentifier r yang akan ditampilkan adalah ...');
     writeln('P:=1; q:=2; r:=0;');
     writeln('If (p<>1) then');
     gotoxy(wherex+3,wherey);writeln('If (q<>2) then');
@@ -429,7 +392,7 @@ begin
     write('jawab = ');readln(answer[2]);
     clrscr;
     Writeln('Soal 3');
-    writeln('Output dari cuplikan pengulangan berikut adalah .');
+    writeln('Output dari cuplikan pengulangan berikut adalah ...');
     writeln;
     writeln('For i:= 1 to 3 do');
     writeln('Write(‘Polstat STIS’);');
@@ -454,7 +417,7 @@ begin
     clrscr;
     Writeln('Soal 4');
     writeln('For i:= awal to akhir do ...');
-    writeln('Tipe data yang tidak dapat digunakan untuk variable i adalah.');
+    writeln('Tipe data yang tidak dapat digunakan untuk variable i adalah ...');
     writeln('a. Boolean');
     writeln('b. Char');
     writeln('c. Subrange');
@@ -464,12 +427,12 @@ begin
     clrscr;
     writeLn;
     Writeln('Soal 5');
-    writeln('Lihat cuplikan program di bawah ini.');
+    writeln('Lihat cuplikan program di bawah ini...');
     writeln;
     writeln('Case ekspresi of');
     writeln('. . .');
     writeln;
-    writeln('Yang pasti error dari ekspresi adalah');
+    writeln('Yang pasti error dari ekspresi adalah ?');
     writeln('a. Ord(a)');
     writeln('b. a mod b');
     writeln('c. a div b');
@@ -533,8 +496,8 @@ begin
     write('jawab = ');readln(answer[2]);
     clrscr;
     Writeln('Soal 3');
-    Writeln('Beda Procedure dengan Function adalah');
-    Writeln('a.Standar & Terstruktur ');
+    Writeln('Beda Procedure dengan Function adalah ...');
+    Writeln('a.Standar & Terstruktur');
     Writeln('b.Standar & User Defined');
     Writeln('c.Pointer & user Defined');
     Writeln('d.Record & Array');
@@ -542,7 +505,7 @@ begin
     write('jawab = ');readln(answer[3]);
     clrscr;
     Writeln('Soal 4');
-    Writeln('Tipe data/jenis data sederhana dapat digolongkan menjadi tipe data');
+    Writeln('Tipe data/jenis data sederhana dapat digolongkan menjadi tipe data...');
     Writeln('a.Procedure mengembalikan suatu nilai, sedangkan function tidak');
     Writeln('b.Procedure tidak mengembalikan suatu nilai, function mengembalikan suatu nilai');
     Writeln('c.Procedure dan function mengembalikan suatu nilai');
@@ -574,34 +537,34 @@ begin
     jawab[1]:='b'; jp[1]:='Elemen array diakses menggunakan namaArray.Namafield, sedangkan record diakses menggunakan namaRecord[..].';
     jawab[2]:='d'; jp[2]:='Base case sudah tercapai'; 
     jawab[3]:='a'; jp[3]:='ArraySatu : Array[Absen]';
-    jawab[4]:='a'; jp[4]:='DataMahasiswa = Record Begin NIM:Integer;Nama:String[15];Nilai:Real; End;';
+    jawab[4]:='a'; jp[4]:='DataMahasiswa = Record        Begin          NIM:Integer;Nama:String[15];Nilai:Real;             End;';
     jawab[5]:='d'; jp[5]:='Arr : Array [1..20]';
 
     clrscr;
     Writeln('Soal 1');
     Writeln('Pernyataan berikut tentang record dan array yang salah adalah?');
-    Writeln('a. Berbeda dengan array, record terdiri dari kumpulan elemen dengan tipe data yang bisa berbeda.');
-    Writeln('b. Elemen array diakses menggunakan namaArray.Namafield, sedangkan record diakses menggunakan namaRecord[..].');
+    Writeln('a. Berbeda dengan array, record terdiri dari kumpulan elemen dengan tipe data yang bisa berbeda');
+    Writeln('b. Elemen array diakses menggunakan namaArray.Namafield, sedangkan record diakses menggunakan namaRecord[..]');
     Writeln('c. Elemen dari record dapat berupa array, dan elemen dari array dapat berupa record');
-    Writeln('d. Record termasuk ke dalam structured data types, sedangkan array bukan.');
+    Writeln('d. Record termasuk ke dalam structured data types, sedangkan array bukan');
     writeLn;
     write('jawab = ');readln(answer[1]);
     clrscr;
     Writeln('Soal 2');
-    Writeln('Suatu program rekursi akan berhenti atau selesai jika..');
+    Writeln('Suatu program rekursi akan berhenti atau selesai jika...');
     Writeln('a. Tidak ada base case');
     Writeln('b. Base case belum tercapai');
     Writeln('c. Base case tidak terdefinisi');
     Writeln('d. Base case sudah tercapai');
     writeLn;
-    write('jawab = ');readln(answer[2]); {LANJUTIN SAMPE 5 SOAL}
+    write('jawab = ');readln(answer[2]); 
     clrscr;
     Writeln('Soal 3');
     Writeln('Jika diberikan potongan deklarasi Type berikut :');
     Writeln('   TYPE');
     Writeln('   Absen = 1..38');
     Writeln('   Jurusan = (D3, ST, KS)');
-    Writeln('Maka deklarasi Array berikut yang tidak benar adalah..');
+    Writeln('Maka deklarasi Array berikut yang tidak benar adalah...');
     Writeln('a. ArraySatu : Array[Absen]');
     Writeln('b. ArraySatu : Array[Jurusan] of Integer');
     Writeln('c. ArraySatu : Array[1..20] of Absen');
@@ -610,7 +573,7 @@ begin
     write('jawab = ');readln(answer[3]);
     clrscr;
     Writeln('Soal 4');
-    Writeln('Deskripsi tipe data record yang benar adalah..');
+    Writeln('Deskripsi tipe data record yang benar adalah...');
     Writeln('a. DataMahasiswa = Record ');
     Writeln('   Begin');
     Writeln('       NIM:Integer;Nama:String[15];Nilai:Real;');
@@ -626,7 +589,7 @@ begin
     Writeln('       NIM:Integer;Nama:String[15];Nilai:Real;');
     Writeln('   End;');
     writeLn;
-    write('jawab = ');readln(answer[4]); {LANJUTIN SAMPE 5 SOAL}
+    write('jawab = ');readln(answer[4]); 
     clrscr;
     Writeln('Soal 5');
     Writeln('Berikut penulisan program array yang benar, kecuali...');
@@ -635,7 +598,7 @@ begin
     Writeln('c. Arr : Array [1..20] of real');
     Writeln('d. Arr : Array [1..20]');
     writeLn;
-    write('jawab = ');readln(answer[5]); {LANJUTIN SAMPE 5 SOAL}
+    write('jawab = ');readln(answer[5]); 
     // Masuk tampilan setelah selesai mengerjakan
     closing(answer,jawab,NAMA,jp);
 end;
@@ -700,12 +663,12 @@ begin
         babchoose:
         clrscr;
         writeLn('         BAB SOAL ');
-        Writeln('============================');
+        Writeln('============================'); textcolor(blue);
         Writeln('1. Dasar-Dasar Pemrograman dan Arsitektur Data');
         Writeln('2. Pemilihan dan Pengulangan Tunggal (conditional dan Looping)');
         Writeln('3. Pengulangan (Berjenjang dan Bertingkat), Enumerated dan Subrange, serta Subprogram');
         Writeln('4. Array dan Record');
-        Writeln();
+        textcolor(yellow);writeLn;
         textcolor(yellow);gotoxy(WhereX,9);Writeln('note: cukup tuliskan angkanya saja');
         textcolor(white);gotoxy(WhereX,8);write('Silahkan pilih Bab soal = ');Readln(BAB);
         case bab of     {ini nanti casenya bakal diganti}
