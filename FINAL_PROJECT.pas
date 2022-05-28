@@ -14,7 +14,7 @@ NAMA:Lnama;
 BAB:string;
 
 
-// intro 1 wkwk
+// intro 1 :D
 procedure intro1;
 var x:integer;
 begin
@@ -144,11 +144,8 @@ begin
         Writeln('========================================');
         delay(150);
     end;
-    delay(1000);
-    textcolor(white);textbackground(BLACK);
-
+    delay(1000); textcolor(white);textbackground(BLACK);
 end;
-
 
 // INI BUAT LOADING
 procedure loading;
