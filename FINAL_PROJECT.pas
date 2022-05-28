@@ -307,10 +307,10 @@ begin
     clrscr;
     Writeln('SOAL 1');
     Writeln('Dibawah ini yang bukan struktur dasar algoritma adalah...');
-    Writeln('a.	Runtunan');
-    Writeln('b.	Pemilihan');
-    Writeln('c.	Rekursi');
-    Writeln('d.	Pengulangan');
+    Writeln('a. Runtunan');
+    Writeln('b. Pemilihan');
+    Writeln('c. Rekursi');
+    Writeln('d. Pengulangan');
     writeLn;
     write('Jawab = ');readln(answer[1]);
     clrscr;
@@ -333,7 +333,7 @@ begin
     write('Jawab = ');readln(answer[3]);
     clrscr;
     Writeln('SOAL 4');
-    Writeln('Bilangan`biner dari 60 adalah...');
+    Writeln('Bilangan biner dari 60 adalah...');
     Writeln('a. 0011 1100');    
     Writeln('b. 1100 0011');
     Writeln('c. 0000 1101');
@@ -600,7 +600,7 @@ begin
     Writeln('Soal 5');
     Writeln('Berikut penulisan program array yang benar, kecuali...');
     Writeln('a. Arr : Array [1..100] of integer');
-    Writeln('b. Arr : Array [1..4] of String[2]=(`A`,`B`,`AB`,`O`');
+    Writeln('b. Arr : Array [1..4] of String[2]=(`A`,`B`,`AB`,`O`)');
     Writeln('c. Arr : Array [1..20] of real');
     Writeln('d. Arr : Array [1..20]');
     writeLn;
@@ -617,7 +617,7 @@ begin
         babchoose:
         clrscr;
         writeLn('         BAB SOAL ');
-        Writeln('============================'); textcolor(blue);
+        Writeln('============================'); textcolor(11);
         Writeln('1. Dasar-Dasar Pemrograman dan Arsitektur Data');
         Writeln('2. Pemilihan dan Pengulangan Tunggal (conditional dan Looping)');
         Writeln('3. Pengulangan (Berjenjang dan Bertingkat), Enumerated dan Subrange, serta Subprogram');
