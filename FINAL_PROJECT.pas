@@ -226,7 +226,7 @@ end;
 procedure closing(answer,jawab:pilgan; NAMA:Lnama; jp:jaw);
 label u;
 var 
-lihat:integer; 
+lihat,x:integer; 
 kem:char;
 begin
      // TAMPILAN SETELAH SELESAI MENGERJAKAN SOAL
@@ -254,7 +254,8 @@ begin
         3:begin //tampilan keluar
             for i:=17 downto 1 do begin
             clrscr;
-            textcolor(green);
+            x:=Randomrange(9,15);
+            textcolor(x);
             gotoxy(1,i);Writeln('                        Terima kasih');
             gotoxy(1,i+1);Writeln('                  =======================   ');
             gotoxy(20,i+3);Writeln('     Kelompok 2');
@@ -283,7 +284,6 @@ begin
 // kunci jawaban
     jawab[1]:='a'; jp[1]:='saya bang';
     jawab[2]:='b'; jp[2]:='Magelang'; {Lanjutin sampe 5;  Jawab itu kunci buat opsi pilgannya;  jp itu kunci jawaban yang tulisan sebelaeh pilgan}
-
 
     clrscr;
     Writeln('Soal 1');
