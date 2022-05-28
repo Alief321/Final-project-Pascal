@@ -168,7 +168,7 @@ begin
     
     for x:=1 to 100 do
     begin
-        delay(10);
+        delay(1);
         gotoxy(38,12);
         writeln(x,' %');
 
@@ -219,7 +219,9 @@ begin
     end;
 end;
 
+
 // Tampilan setelah soal selesai
+procedure pilihBab;forward;
 procedure closing(answer,jawab:pilgan; NAMA:Lnama; jp:jaw);
 label u,hitpoint,kuncjaw;
 var 
@@ -231,7 +233,8 @@ begin
     clrscr;
     Writeln('1. Lihat jumlah point');
     Writeln('2. Lihat kunci jawaban ');
-    Writeln('3. Keluar');
+    Writeln('3. Kembali ke Menu Pilih Soal');
+    Writeln('4. Keluar');
     write('pilih = ');readln(lihat);
     writeLn;
 
@@ -260,7 +263,11 @@ begin
                 textcolor(white);goto kuncjaw;
             end;
         end;
-        3:begin //tampilan keluar
+        3:begin
+            Clrscr; loading; clrscr;
+            pilihBab;
+        end;
+        4:begin //tampilan keluar
             for i:=17 downto 1 do begin
             clrscr;
             x:=Randomrange(9,15);
@@ -321,7 +328,7 @@ begin
     Writeln('a. Operator word') ;  
     Writeln('b. Langkah-langkah praktis');
     Writeln('c. Syntax');
-    Writeln('d. Reserve Wword');
+    Writeln('d. Reserve word');
     writeLn;
     write('Jawab = ');readln(answer[3]);
     clrscr;
@@ -383,7 +390,7 @@ begin
     gotoxy(wherex+6,wherey);writeln('r:=r+1');
     writeln('else');
     gotoxy(wherex+3,wherey);writeln('r:=r+2;');
-    writeln('writeln(‘r= ’,r)');
+    writeln('writeln(`r= `,r)');
     writeln('a. r=0');
     writeln('b. r=1');
     writeln('c. r=2');
@@ -395,8 +402,8 @@ begin
     writeln('Output dari cuplikan pengulangan berikut adalah ...');
     writeln;
     writeln('For i:= 1 to 3 do');
-    writeln('Write(‘Polstat STIS’);');
-    writeln('Writeln(‘Oke’);');
+    writeln('Write(`Polstat STIS`);');
+    writeln('Writeln(`Oke`);');
     writeln('a. Polstat STIS');
     gotoxy(wherex+3,wherey);writeln('Oke');
     gotoxy(wherex+3,wherey);writeln('Polstat STIS');
@@ -468,7 +475,7 @@ begin
     writeln('end;');
     writeln('writeln(sum);');
     writeln;
-    write('Berapakah output dari program di atas?');
+    writeln('Berapakah output dari program di atas?');
     Writeln('a. 12');
     Writeln('b. 110');
     Writeln('c. 90');
@@ -603,6 +610,35 @@ begin
     closing(answer,jawab,NAMA,jp);
 end;
 
+procedure pilihBab;
+label babchoose;
+var bab:string;
+begin
+        //  Pemilihan subbab soal
+        babchoose:
+        clrscr;
+        writeLn('         BAB SOAL ');
+        Writeln('============================'); textcolor(blue);
+        Writeln('1. Dasar-Dasar Pemrograman dan Arsitektur Data');
+        Writeln('2. Pemilihan dan Pengulangan Tunggal (conditional dan Looping)');
+        Writeln('3. Pengulangan (Berjenjang dan Bertingkat), Enumerated dan Subrange, serta Subprogram');
+        Writeln('4. Array dan Record');
+        textcolor(yellow);writeLn;
+        textcolor(yellow);gotoxy(WhereX,9);Writeln('note: cukup tuliskan angkanya saja');
+        textcolor(white);gotoxy(WhereX,8);write('Silahkan pilih Bab soal = ');Readln(BAB);
+        case bab of     {ini nanti casenya bakal diganti}
+            '1': begin loading; soal1(NAMA); end;
+            '2': begin loading; soal2(NAMA); end;
+            '3': begin loading; soalbag3(NAMA); end;
+            '4': begin loading; soal4(NAMA); end;
+            else begin
+                textcolor(red);gotoxy(WhereX,11);Writeln('error invalid code'); 
+                delay(150);textcolor(white);goto babchoose;
+            end;
+        end;
+    end;
+
+
 
 // MAIN PROGRAM
 begin
@@ -659,29 +695,8 @@ begin
     
     if lowercase(lanjut)='y' then 
     begin
-    //  Pemilihan subbab soal
-        babchoose:
-        clrscr;
-        writeLn('         BAB SOAL ');
-        Writeln('============================'); textcolor(blue);
-        Writeln('1. Dasar-Dasar Pemrograman dan Arsitektur Data');
-        Writeln('2. Pemilihan dan Pengulangan Tunggal (conditional dan Looping)');
-        Writeln('3. Pengulangan (Berjenjang dan Bertingkat), Enumerated dan Subrange, serta Subprogram');
-        Writeln('4. Array dan Record');
-        textcolor(yellow);writeLn;
-        textcolor(yellow);gotoxy(WhereX,9);Writeln('note: cukup tuliskan angkanya saja');
-        textcolor(white);gotoxy(WhereX,8);write('Silahkan pilih Bab soal = ');Readln(BAB);
-        case bab of     {ini nanti casenya bakal diganti}
-            '1': begin loading; soal1(NAMA); end;
-            '2': begin loading; soal2(NAMA); end;
-            '3': begin loading; soalbag3(NAMA); end;
-            '4': begin loading; soal4(NAMA); end;
-            else begin
-                textcolor(red);gotoxy(WhereX,11);Writeln('error invalid code'); 
-                delay(150);textcolor(white);goto babchoose;
-            end;
-        end;
-    end
+        pilihBab;
+        end
     else goto ketnil;
 
 end.
