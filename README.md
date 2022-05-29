@@ -4,4 +4,5 @@ ya gitu aja
 
 
 # reminder
-nanti ganti opsi jawaban 1 soal bag 2
+s12 b3
+s3 b4
