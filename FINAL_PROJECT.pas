@@ -338,7 +338,7 @@ answer,jawab,jp:jaw;
 begin
 
 // kunci jawaban
-    jawab[1]:='a'; jp[1]:='Bersarang';
+    jawab[1]:='b'; jp[1]:='Berjenjang';
     jawab[2]:='a'; jp[2]:='r=0';
     jawab[3]:='d'; jp[3]:='Polstat STIS Polstat STIS Polstat STIS Oke';
     jawab[4]:='d'; jp[4]:='Double';
@@ -580,7 +580,7 @@ begin
         Writeln('============================'); textcolor(11);
         Writeln('1. Dasar-Dasar Pemrograman dan Arsitektur Data');
         Writeln('2. Pemilihan dan Pengulangan Tunggal (conditional dan Looping)');
-        Writeln('3. Pengulangan (Berjenjang dan Bertingkat), Enumerated dan Subrange, serta Subprogram');
+        Writeln('3. Pengulangan (nested loop), Enumerated dan Subrange, serta Subprogram');
         Writeln('4. Array dan Record');
         textcolor(yellow);writeLn;
         textcolor(yellow);gotoxy(WhereX,9);Writeln('note: cukup tuliskan angkanya saja');
