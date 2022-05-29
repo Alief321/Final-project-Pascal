@@ -376,7 +376,7 @@ begin
     writeln('Output dari cuplikan pengulangan berikut adalah ...');
     writeln;
     writeln('For i:= 1 to 3 do');
-    writeln('Write(`Polstat STIS`);');
+    writeln('Write(`Polstat STIS `);');
     writeln('Writeln(`Oke`);');
     writeln('a. Polstat STIS');
     gotoxy(wherex+3,wherey);writeln('Oke');
