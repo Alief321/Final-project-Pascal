@@ -470,7 +470,7 @@ begin
     answer[2]:=check(answer[2],18); 
     clrscr;
     Writeln('Soal 3');
-    Writeln('Beda Procedure dengan Function adalah ...');
+    Writeln('Tipe data/jenis data sederhana dapat digolongkan menjadi tipe data...');
     Writeln('a.Standar & Terstruktur');
     Writeln('b.Standar & User Defined');
     Writeln('c.Pointer & user Defined');
@@ -478,7 +478,7 @@ begin
     answer[3]:=check(answer[3],8); 
     clrscr;
     Writeln('Soal 4');
-    Writeln('Tipe data/jenis data sederhana dapat digolongkan menjadi tipe data...');
+    Writeln('Beda Procedure dengan Function adalah ...');
     Writeln('a.Procedure mengembalikan suatu nilai, sedangkan function tidak');
     Writeln('b.Procedure tidak mengembalikan suatu nilai, function mengembalikan suatu nilai');
     Writeln('c.Procedure dan function mengembalikan suatu nilai');
