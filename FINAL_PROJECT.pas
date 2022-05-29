@@ -40,8 +40,7 @@ begin
     for i:=21 downto 12 do begin //ini nanti tulisannya naik
     x:=Randomrange(9,14);
     if i=12 then x:=10;
-    textcolor(x);
-    delline;
+    textcolor(x);delline;
     gotoxy(1,i+3);Writeln('= = = = = =     = = = = = =  = = = = = =           =   = = = = =     = = = = =   = = = = = =');delline;
     gotoxy(1,i+4);Writeln('=         =     =         =  =         =           =   =           =                  =');delline;
     gotoxy(1,i+5);Writeln('=         =     =         =  =         =           =   =           =                  =');delline;
@@ -52,8 +51,7 @@ begin
     gotoxy(1,i+10);Writeln('=               =    =       = = = = = =     = = = =   = = = = =     = = = = =        =');delline;
     delay(150);
     end;
-    delay(1000);
-    textcolor(white);
+    delay(1000);textcolor(white);
 end;
 
 // Intro 2 hehe
@@ -76,45 +74,32 @@ begin
     clrscr;
     // Ngeprint kotakan
     for i:=1 to length(teks) do begin
-        x:=Randomrange(9,14);
-        textcolor(x);
-        gotoxy(1,i);write(teks[i]);
-        delay(25);  
+        x:=Randomrange(9,14);textcolor(x);
+        gotoxy(1,i);write(teks[i]);delay(25);  
     end;
     for i:=2 to length(teks2) do begin
-        x:=Randomrange(9,14);
-        textcolor(x);
-        gotoxy(i,WhereY);write(teks2[i]);
-        delay(20);
+        x:=Randomrange(9,14);textcolor(x);
+        gotoxy(i,WhereY);write(teks2[i]);delay(20);
     end;
     for i:=length(teks) downto 1 do begin
-        x:=Randomrange(9,14);
-        textcolor(x);
-        gotoxy(40,i);write(teks[i]);
-        delay(25);
+        x:=Randomrange(9,14);textcolor(x);
+        gotoxy(40,i);write(teks[i]);delay(25);
     end;
     for i:=length(teks2) downto 2 do begin
-        x:=Randomrange(9,14);
-        textcolor(x);
-        gotoxy(i,WhereY);write(teks2[i]);
-        delay(20);
+        x:=Randomrange(9,14);textcolor(x);
+        gotoxy(i,WhereY);write(teks2[i]);delay(20);
     end;
     
     {ngeprint tulisan}
     for i:=1 to length(teks3) do begin
-        x:=Randomrange(9,14);
-        textcolor(x);
-        gotoXY(i+5,9);Write(teks3[i]);
-        delay(25);
+        x:=Randomrange(9,14); textcolor(x);
+        gotoXY(i+5,9); Write(teks3[i]); delay(25);
     end;
 
     for i:=1 to length(teks4) do begin
-        x:=Randomrange(9,14);
-        textcolor(x);
-        gotoXY(i+6,11);Write(teks4[i]);
-        delay(25);
-        gotoXY(i+5,10);Write(teks2[i]);
-        delay(25);
+        x:=Randomrange(9,14); textcolor(x);
+        gotoXY(i+6,11);Write(teks4[i]);delay(25);
+        gotoXY(i+5,10);Write(teks2[i]);delay(25);
     end;
     for i:=1 to 20 do begin   //untuk blink blink wkwk
         x:=Randomrange(0,15);
@@ -152,31 +137,19 @@ procedure loading;
 VAR
 X,Z:integer;
 begin
-    clrscr;
-    Z:=0;
-    textcolor(green);
-    gotoxy(9,1);
-    writeln('Memuat..');
-    gotoxy(1,3);
-    writeln('---------------------');
-    gotoxy(1,4);
-    writeln('|');
-    gotoxy(22,4);
-    writeln('|');
-    gotoxy(1,5);
-    writeln('---------------------');
+    clrscr; Z:=0;
+    textcolor(green); gotoxy(9,1); writeln('Memuat..');
+    gotoxy(1,3); writeln('---------------------');
+    gotoxy(1,4); writeln('|');
+    gotoxy(22,4); writeln('|');
+    gotoxy(1,5); writeln('---------------------');
     
     for x:=1 to 100 do
     begin
-        delay(1);
-        gotoxy(10,2);
-        writeln(x,' %');
-
+        delay(1); gotoxy(10,2); writeln(x,' %');
         if(x mod 5=0) then
         begin
-            z:=z+1;
-            gotoxy(1+z,4);
-            write('=');
+            z:=z+1; gotoxy(1+z,4); write('=');
         end;
     end;
     textcolor(white);
@@ -646,8 +619,7 @@ begin
     Writeln('==================================');
     GotoXy(5,4); writeLn('------------------------');
     gotoxy(5,5);write('|');
-    textbackground(0);
-    gotoXY(28,5);Writeln('|');
+    textbackground(0); gotoXY(28,5);Writeln('|');
     GotoXy(5,6); writeLn('------------------------');
     writeLn;
     gotoxy(5,8);Write('Tekan y untuk memulai = ');
