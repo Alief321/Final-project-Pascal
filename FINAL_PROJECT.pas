@@ -391,9 +391,8 @@ begin
     writeln('c. Polstat STIS Oke');
     gotoxy(wherex+3,wherey);writeln('Polstat STIS Oke');
     gotoxy(wherex+3,wherey);writeln('Polstat STIS Oke');
-    gotoxy(wherex+3,wherey);writeln('Polstat STIS Oke');
     writeln('d. Polstat STIS Polstat STIS Polstat STIS Oke');
-    answer[3]:=check(answer[3],23); 
+    answer[3]:=check(answer[3],22); 
     clrscr;
     Writeln('Soal 4');
     writeln('For i:= awal to akhir do ...');
@@ -579,8 +578,8 @@ begin
         writeLn('         BAB SOAL ');
         Writeln('============================'); textcolor(11);
         Writeln('1. Dasar-Dasar Pemrograman dan Arsitektur Data');
-        Writeln('2. Pemilihan dan Pengulangan Tunggal (conditional dan Looping)');
-        Writeln('3. Pengulangan (nested loop), Enumerated dan Subrange, serta Subprogram');
+        Writeln('2. Pemilihan dan Pengulangan Tunggal (Conditional dan Looping)');
+        Writeln('3. Pengulangan (Nested Loop), Enumerated dan Subrange, serta Subprogram');
         Writeln('4. Array dan Record');
         textcolor(yellow);writeLn;
         textcolor(yellow);gotoxy(WhereX,9);Writeln('note: cukup tuliskan angkanya saja');
