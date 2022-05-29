@@ -291,12 +291,14 @@ begin
 end;
 
 // Gate Check
-function check(a:char):char;
+function check(var a:char):char;
 begin
     repeat begin
         textcolor(white); gotoxy(1,10); write('Jawab = '); read(a); delay(100); delline;
-        if ((a='a') or (a='b') or (a='c') or (a='d') or (a=' ')) then break; 
-        textcolor(red); gotoxy(1,10);Write('Error Invalid Input'); delay(100);delline;
+        if ((a='a') or (a='b') or (a='c') or (a='d') or (a=' ')) then break
+        else begin 
+            textcolor(red); gotoxy(1,10);Write('Error Invalid Input'); delay(100);delline; 
+        end;
     end;    
     until ((a='a') or (a='b') or (a='c') or (a='d') or (a=' '));
     check:=a;
