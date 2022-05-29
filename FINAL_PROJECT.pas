@@ -3,16 +3,13 @@ PROGRAM FINALALPRO;
 uses crt,math;
 label s,ketnil,babchoose;
 type
-pilgan= array [1..5] of char;
 jaw= array [1..5] of string;
 Lnama=string[20];
 var
-start,lanjut:char;
 i,ist: integer;
 st:string[5];
 NAMA:Lnama;
-BAB:string;
-
+start,lanjut:string;
 
 // intro 1 :D
 procedure intro1;
@@ -156,7 +153,7 @@ begin
 end;
 
 // Perhitungan Point
-procedure poin(answer,jawab:pilgan; Nama:Lnama);
+procedure poin(answer,jawab:jaw; Nama:Lnama);
 var
 benar,salah,kosong,Point:integer;
 begin
@@ -183,7 +180,7 @@ begin
 end;
 
 // Tampil Kunci Jawaban
-procedure jb(jawab:pilgan; jp:jaw);
+procedure jb(jawab,jp:jaw);
 var i:integer;
 begin
     // kunci jawaban fix untuk 5 nomer ygy
@@ -195,11 +192,11 @@ end;
 
 // Tampilan setelah soal selesai
 procedure pilihBab;forward;
-procedure closing(answer,jawab:pilgan; NAMA:Lnama; jp:jaw);
+procedure closing(answer,jawab,jp:jaw; NAMA:Lnama);
 label u,hitpoint,kuncjaw;
 var 
 x:integer; 
-kem,lihat:char;
+kem,lihat:string;
 begin
      // TAMPILAN SETELAH SELESAI MENGERJAKAN SOAL
     u:
@@ -264,7 +261,7 @@ begin
 end;
 
 // Gate Check
-function check(var a:char; x:integer):char;
+function check(var a:string; x:integer):string;
 label sini;
 begin   sini:
         textcolor(white); gotoxy(1,x); write('Jawab = '); readln(a); 
@@ -279,8 +276,7 @@ end;
 // SOAL BAGIAN 1
 procedure soal1(NAMA:string);  
 var 
-answer,jawab:pilgan;
-jp:jaw;
+answer,jawab,jp:jaw;
 begin
 
 // kunci jawaban
@@ -332,14 +328,13 @@ begin
     answer[5]:=check(answer[5],8);
 
     // Masuk tampilan setelah selesai mengerjakan 
-    closing(answer,jawab,NAMA,jp);
+    closing(answer,jawab,jp,NAMA);
 end;
 
 // SOAL BAGIAN 2
 procedure soal2(NAMA:string);  
 var 
-answer,jawab:pilgan;
-jp:jaw;
+answer,jawab,jp:jaw;
 begin
 
 // kunci jawaban
@@ -423,14 +418,13 @@ begin
     answer[5]:=check(answer[5],13); 
     
     // Masuk tampilan setelah selesai mengerjakan
-    closing(answer,jawab,NAMA,jp);
+    closing(answer,jawab,jp,NAMA);
 end;
 
  // SOAL BAGIAN 3
 procedure soalBag3(NAMA:string);  
 var 
-answer,jawab:pilgan;
-jp:jaw;
+answer,jawab,jp:jaw;
 begin 
 
 // kunci jawaban
@@ -501,14 +495,13 @@ begin
 
 
     // Masuk tampilan setelah selesai mengerjakan
-    closing(answer,jawab,NAMA,jp);
+    closing(answer,jawab,jp,NAMA);
 end;
 
 // SOAL BAGIAN 4
 procedure soal4(NAMA:string);  
 var 
-answer,jawab:pilgan;
-jp:jaw;
+answer,jawab,jp:jaw;
 begin
 
 // kunci jawaban
@@ -573,12 +566,12 @@ begin
     Writeln('d. Arr : Array [1..20]');
     answer[5]:=check(answer[5],8); 
     // Masuk tampilan setelah selesai mengerjakan
-    closing(answer,jawab,NAMA,jp);
+    closing(answer,jawab,jp,NAMA);
 end;
 
 procedure pilihBab;
 label babchoose;
-var bab:char;
+var bab:string;
 begin
         //  Pemilihan subbab soal
         babchoose:
