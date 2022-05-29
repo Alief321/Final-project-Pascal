@@ -293,13 +293,15 @@ end;
 // Gate Check
 function check(a:char):char;
 begin
-    while((a<>'a') and (a<>'b') and (a<>'c') and (a<>'d') and (a<>' ') and (a<>''))do begin
-        if ((a='a') or (a='b') or (a='c') or (a='d') or (a=' ')) then break;
-        textcolor(red); gotoxy(1,10);Write('Error Invalid Input'); delay(100);delline;
+    repeat begin
         textcolor(white); gotoxy(1,10); write('Jawab = '); read(a); delay(100); delline;
-    end;
+        if ((a='a') or (a='b') or (a='c') or (a='d') or (a=' ')) then break; 
+        textcolor(red); gotoxy(1,10);Write('Error Invalid Input'); delay(100);delline;
+    end;    
+    until ((a='a') or (a='b') or (a='c') or (a='d') or (a=' '));
     check:=a;
 end;
+
 
 // SOAL BAGIAN 1
 procedure soal1(NAMA:string);  
@@ -323,7 +325,7 @@ begin
     Writeln('c. Rekursi');
     Writeln('d. Pengulangan');
     writeLn;
-    write('Jawab = ');readln(answer[1]); answer[1]:=check(answer[1]);
+    answer[1]:=check(answer[1]);
     clrscr;
     Writeln('SOAL 2');
     Writeln('Apa yang dimaksud dengan algoritma ?');
@@ -332,7 +334,7 @@ begin
     Writeln('c. Cara untuk menambah masalah');
     Writeln('d. Syntax yang susah dimengerti');
     writeLn;
-    write('Jawab = ');readln(answer[2]);answer[2]:=check(answer[2]);
+    answer[2]:=check(answer[2]);
     clrscr;
     Writeln('SOAL 3');
     Writeln('Kata-kata yang sudah didefinisikan oleh Pascal yang memiliki maksud tertentu dan tidak boleh digunakan dalam identifier disebut...');	
@@ -341,7 +343,7 @@ begin
     Writeln('c. Syntax');
     Writeln('d. Reserve word');
     writeLn;
-    write('Jawab = ');readln(answer[3]);answer[3]:=check(answer[3]);
+    answer[3]:=check(answer[3]);
     clrscr;
     Writeln('SOAL 4');
     Writeln('Bilangan biner dari 60 adalah...');
@@ -350,7 +352,7 @@ begin
     Writeln('c. 0000 1101');
     Writeln('d. 1101 0000');
     writeLn;
-    write('Jawab = ');readln(answer[4]);answer[4]:=check(answer[4]);
+    answer[4]:=check(answer[4]);
     clrscr;
     Writeln('SOAL 5');
     Writeln('Dibawah ini yang tidak termasuk tipe data Ordinal adalah...');
@@ -359,7 +361,7 @@ begin
     Writeln('c. Karakter');  
     Writeln('d. Real');
     writeln;
-    write('Jawab = ');readln(answer[5]);answer[5]:=check(answer[5]);
+    answer[5]:=check(answer[5]);
 
     // Masuk tampilan setelah selesai mengerjakan 
     closing(answer,jawab,NAMA,jp);
