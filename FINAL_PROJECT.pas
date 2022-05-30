@@ -57,7 +57,7 @@ var
 teks: string[20];
 teks2: string[42];
 teks3,teks4:string[30];
-posisiKar,i,x,y: integer;
+i,x,y: integer;
 
 begin
     intro1;
