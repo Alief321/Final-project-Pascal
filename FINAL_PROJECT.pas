@@ -507,7 +507,7 @@ begin
     jawab[1]:='b'; jp[1]:='Elemen array diakses menggunakan namaArray.Namafield, sedangkan record diakses menggunakan namaRecord[..].';
     jawab[2]:='d'; jp[2]:='Base case sudah tercapai'; 
     jawab[3]:='a'; jp[3]:='ArraySatu : Array[Absen]';
-    jawab[4]:='a'; jp[4]:='DataMahasiswa = Record        Begin          NIM:Integer;Nama:String[15];Nilai:Real;             End;';
+    jawab[4]:='b'; jp[4]:='DataMahasiswa = Record             NIM:Integer;Nama:String[15];Nilai:Real;             End;';
     jawab[5]:='d'; jp[5]:='Arr : Array [1..20]';
 
     clrscr;
