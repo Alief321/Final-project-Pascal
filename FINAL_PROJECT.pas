@@ -251,6 +251,7 @@ begin
             gotoxy(20,i+7);Writeln('4. Naufal Fadli M.');
             gotoxy(20,i+8);Writeln('5. Putri Aysyah');delay(200);
             end;
+            Readln;
             exit;
         end;
         else begin
@@ -264,12 +265,12 @@ end;
 function check(var a:string; x:integer):string;
 label sini;
 begin   sini:
-        textcolor(white); gotoxy(1,x); write('Jawab = '); readln(a); 
+        textcolor(yellow); gotoxy(1,x); write('Jawab = '); readln(a); 
         if ((a<>'a') and (a<>'b') and (a<>'c') and (a<>'d') and (a<>' ')) then begin
             textcolor(red); gotoxy(1,x);Write('Error Invalid Input');
             delay(200);delline; goto sini;
         end;
-    check:=a;
+    textcolor(white); check:=a; 
 end;
 
 
