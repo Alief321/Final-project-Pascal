@@ -266,11 +266,11 @@ function check(var a:string; x:integer):string;
 label sini;
 begin   sini:
         textcolor(yellow); gotoxy(1,x); write('Jawab = '); readln(a); 
-        if ((a<>'a') and (a<>'b') and (a<>'c') and (a<>'d') and (a<>' ')) then begin
+        if ((lowercase(a)<>'a') and (lowercase(a)<>'b') and (lowercase(a)<>'c') and (lowercase(a)<>'d') and (lowercase(a)<>' ')) then begin
             textcolor(red); gotoxy(1,x);Write('Error Invalid Input');
             delay(200);delline; goto sini;
         end;
-    textcolor(white); check:=a; 
+    textcolor(white); check:=lowercase(a); 
 end;
 
 
