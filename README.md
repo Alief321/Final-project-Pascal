@@ -4,5 +4,4 @@ ya gitu aja
 
 
 # reminder
-s12 b3
-s3 b4
+s2 b3
