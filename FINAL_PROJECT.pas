@@ -25,8 +25,8 @@ begin
     if i>7 then begin gotoxy(1,i-7);Writeln('= = = = = = = =     =     =             =           =         =');  end;
     if i>6 then begin gotoxy(1,i-6);Writeln('=                   =     = =           =          = =        =');  end;
     if i>5 then begin gotoxy(1,i-5);Writeln('=                   =     =   =         =         =   =       =');  end;
-    if i>4 then begin gotoxy(1,i-4);Writeln('= = = = = = = =     =     =     =       =        = = = =      =');  end;
-    if i>3 then begin gotoxy(1,i-3); Writeln('=                   =     =       =     =       =       =     ='); end;
+    if i>4 then begin gotoxy(1,i-4);Writeln('= = = = = = = =     =     =     =       =        =     =      =');  end;
+    if i>3 then begin gotoxy(1,i-3); Writeln('=                   =     =       =     =       = = = = =     ='); end;
     if i>2 then begin gotoxy(1,i-2);Writeln('=                   =     =         =   =      =         =    =');  end;
     if i>1 then begin gotoxy(1,i-1);Writeln('=                   =     =           = =     =           =   ='); end;
     gotoxy(1,i);Writeln('=                   =     =             =    =             =  = = = = = = = ');
