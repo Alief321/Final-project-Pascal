@@ -251,7 +251,7 @@ begin
             gotoxy(20,i+7);Writeln('4. Naufal Fadli M.');
             gotoxy(20,i+8);Writeln('5. Putri Aysyah');delay(200);
             end;
-            Readln;
+            delay(1000); exit;
             exit;
         end;
         else begin
@@ -429,7 +429,7 @@ begin
 
 // kunci jawaban
     jawab[1]:='a'; jp[1]:='abcaba';
-    jawab[2]:='d'; jp[2]:='8';
+    jawab[2]:='a'; jp[2]:='merupakan fungsi kubik (pangkat 3) dari n';
     jawab[3]:='b'; jp[4]:='Standart & user defined';
     jawab[4]:='b'; jp[3]:='Procedure tidak mengembalikan suatu nilai,function mengembalikan suatu nilai';
     jawab[5]:='b'; jp[5]:='enumerated,subrange type';
@@ -458,22 +458,20 @@ begin
     answer[1]:=check(answer[1],23); 
     clrscr;
     Writeln('Soal 2');writeLn;
-    Writeln('if a > b then');
-    writeln('if c > a then');
-    writeln('   tmp := c;');
-    writeln('  else tmp := a;');
-    writeln('else');
-    Writeln('if c > b then');
-    writeln('  tmp := c;');
-    Writeln('else tmp := b;');
-    writeln('writeln(tmp);');
-    writeln;
-    writeln('Apabila diberikan nilai a=3, b=5 dan c=8, berapakah output dari program tersebut?');
-    Writeln('a. 3');
-    Writeln('b. 5');
-    Writeln('c. 7');
-    Writeln('d. 8');
-    answer[2]:=check(answer[2],19); 
+    Writeln('for i := 1 to n do begin');
+    writeln('   for j := 1 to n do begin ');
+    writeln('       for k := 1 to n do begin');
+    writeln('           writeln(`*`);');
+    writeln('       end; ');
+    Writeln('   end; ');
+    writeln('end; ');
+    Writeln;
+    writeln('dengan sembarang harga n > 0, keluaran `*` akan dicetak berulang-ulang dalam sejumlah baris yang ...');
+    Writeln('a. merupakan fungsi kubik (pangkat 3) dari n');
+    Writeln('b. merupakan fungsi kuadrat dari n ');
+    Writeln('c. merupakan fungsi linier dari n');
+    Writeln('d. merupakan konstanta');
+    answer[2]:=check(answer[2],17); 
     clrscr;
     Writeln('Soal 3');writeLn;
     Writeln('Tipe data/jenis data sederhana dapat digolongkan menjadi tipe data...');
